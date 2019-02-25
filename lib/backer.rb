@@ -8,6 +8,7 @@ class Backer
   
   def back_project(project)
     @backed_projects << project
+    # adds project instance to project array of backer class
     project.add_backer(self) unless project.backers.include?(self)
   end
 end
